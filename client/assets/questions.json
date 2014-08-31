@@ -1,0 +1,49 @@
+[
+    {
+        "id": 1,
+        "text": "Which is not an advantage of using a closure?",
+        "choices": {
+            "a": "Prevent pollution of global scope",
+            "b": "Encapsulation",
+            "c": "Private properties and methods",
+            "d": "Allow conditional use of ‘strict mode’"
+        }
+    },
+    {
+        "id": 2,
+        "text": "To create a columned list of twoline email subjects and dates for a masterdetail view, which are the most semantically correct?",
+        "choices": {
+            "a": "<div>+<span>",
+            "b": "<tr>+<td>",
+            "c": "<ul>+<li>",
+            "d": "<p>+<br>",
+            "e": "none of these",
+            "f": "all of these"
+        }
+    },
+    {
+        "id": 3,
+        "text": "To pass an array of strings to a function, you should not use...",
+        "choices": {
+            "a": "fn.apply(this, stringsArray)",
+            "b": "fn.call(this, stringsArray)",
+            "c": "fn.bind(this, stringsArray)"
+        }
+    },
+    {
+        "id": 4,
+        "text": "____ and ____ would be the HTML tags you would use to display a menu item and its description.",
+        "choices": {
+            "a": "nav and navbar",
+            "b": "<menuitem> and <menu>"
+        }
+    },
+    {
+        "id": 5,
+        "text": "Given <div id=\"outer\"><div class=”inner”></div></div>, which of these two is the most performant way to select the inner div?",
+        "choices": {
+            "a": "getElementById(\"outer\").children[0]",
+            "b": "getElementsByClassName(\"inner\")[0]"
+        }
+    }
+]

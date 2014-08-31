@@ -1,0 +1,41 @@
+<div>
+	<p>[TODO: Question Nav Directive]</p>
+	<h3><strong>{{question.id}}).</strong> {{question.text}}</h3>
+	<ul>
+		<li class="radio"
+			ng-repeat="(key, value) in question.choices">
+			<label for="question-choice">
+				<strong>
+					<input type="radio"
+						value = "{{key}}"
+						name="question-choice"  
+						ng-model="$parent.selectedChoice">
+					{{key}}
+				</strong>:
+				{{value}}
+			</label>
+		</li>
+	</ul>
+	<button 
+		class="btn-link"
+		ng-click="resetChoice()">Clear choice
+	</button>
+	<hr />
+	<p>
+		<button 
+			class="btn btn-default"
+			ng-click="prevQuestion()"
+			ng-disabled="!isPrevQuestionAvailable">Prev Question</button>
+		<button
+			class="btn btn-default" 
+			ng-click="nextQuestion()"
+			ng-disabled="!isNextQuestionAvailable">Next Question
+		</button>
+		<p ng-show="!isNextQuestionAvailable">
+			<button
+				class="btn btn-primary"
+				ng-click="submitAnswers()">You reached end of the test! Submit Answers
+			</button>
+		</p>
+	</p>
+</div>

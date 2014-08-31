@@ -1,0 +1,23 @@
+<div class="well">
+	<div class="row">
+		<div class="col-md-4">
+			<p>
+				User : <strong>{{currentUser}}</strong>
+				&nbsp;|
+				<button 
+					class="btn-link"
+					ng-click="logout()">logout</button>
+			</p>
+		</div>
+		<div class="col-md-4 text-center">
+			<h2>QUIZ</h2>
+		</div>
+		<div class="col-md-4 text-right">
+			<button 
+					class="btn-link"
+					ng-click="resetQuiz()">Reset Quiz</button> |
+			<quiz-timer></quiz-timer>
+		</div>
+	</div>
+</div>
+<div ui-view></div>
