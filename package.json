@@ -5,6 +5,9 @@
   "description": "Quiz Application using AngularJS",
   "repository": "https://github.com/sravanrekandar/quiz-app-angular",
   "license": "MIT",
+  "dependencies":{
+	"express": "3.4.8"
+  },
   "devDependencies": {
     "karma": "~0.10",
     "protractor": "~0.20.1",
@@ -17,7 +20,7 @@
     "postinstall": "bower install",
 
     "prestart": "npm install",
-    "start": "http-server -a localhost -p 8000",
+    "start": "node server.js",
 
     "pretest": "npm install",
     "test": "karma start test/karma.conf.js",

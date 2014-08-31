@@ -32,10 +32,12 @@
     },
     {
         "id": 4,
-        "text": "____ and ____ would be the HTML tags you would use to display a menu item and its description.",
+        "text": "The main purpose of JavaScript in web browser is to",
         "choices": {
-            "a": "nav and navbar",
-            "b": "<menuitem> and <menu>"
+            "a": "Creating animations and other visual effects",
+            "b": "User Interface",
+            "c": "Both a and b",
+            "d": "None of the mentioned"
         }
     },
     {
