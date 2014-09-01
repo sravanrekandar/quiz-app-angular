@@ -1,20 +1,21 @@
-Pages/Routes
-===================
---Home/
+#Plan
+
+##Pages/Routes
+###home/
 	Display links 'login' and 'register'
 	Display 'login' as active
 	Actions:
 	On-click 'login' link : redirect to login page (default)
 	On-click 'register' link: redirect to register page
---Home/login
+####home/login/
 	Display Form
 		On login success: redirect to Quiz
 		On login failure: display error message
---Home/register
+####home/register/
 	Display Form
 		On register success: redirect to Quiz
 		On register failure: display error message
---Quiz/
+####quiz/
 	Display logged-in user info
 	Display logout button
 	Display restart button
@@ -27,10 +28,10 @@ Pages/Routes
 				Kick off timer	
 	on-click: button of nth question: redirect to nth question
 	on-click: Restart
-				Restart the test
---Quiz/question/
+	  	  Restart the test
+####quiz/question/
 	Display question status chart: There should be n number of buttons indicating the n number of questions.
---Quiz/question/:questionId
+####quiz/question/:questionId
 	Display question
 	Display answer form
 	Display 'Next Question' button
@@ -48,7 +49,7 @@ Pages/Routes
 		redirect to prev question
 	on-click: 'nth question'
 
---Quiz/results/
+####quiz/results/
 	Display Score
 	Display Total time took for the test
 	Display 'Evaluate the Questions and answers'
@@ -59,9 +60,9 @@ Pages/Routes
 	on-click: 'Retake the test'
 		Store Current score and evaluated time details for later user
 		Reset the game, redirect to Quiz page
---Quiz/evaluate/
+####quiz/evaluate/
 	Display question status chart
---Quiz/evaluate/:questionId
+####Quiz/evaluate/:questionId
 	Display Question
 	Display Options
 	Display Right/Wrong Icon for 'Does the user answered correct?'
@@ -70,51 +71,49 @@ Pages/Routes
 	Indicate the correct answer
 	Indicate the wrong answer
 	
-Controllers
-===================
---HomeCtrl
+##Controllers
+####HomeCtrl
 	Methods: Switch to 'login/register'
---LoginCtrl
+####LoginCtrl
 	Methods:
 		Validate the form
 		Handle login success
 		Handle login failure
 	Dependency: LoginSvc
---RegisterCtrl
+####RegisterCtrl
 	Methods:
 		Validate the form
 		Handle register success
 		Handle register failure
 	Dependency: LoginSvc
---QuizCtrl
+####QuizCtrl
 	Methods:
 		logout
 		start
 		restart
 		startTimer
 	Dependencies: QuizSvc, LoginSvc
---QuestionCtrl
+####QuestionCtrl
 	Methods:
 		getQuestion
 		nextQuestion
 		prevQuestion
 		gotoQuestion
 		submitAnswers
---EvaluateCtrl
+####EvaluateCtrl
 	Methods:
 		nextQuestion
 		prevQuestion
 		gotoQuestion
---ResultsCtrl
+####ResultsCtrl
 	Methods:
 		getCurrentScore
 		evaluateResults
 		restart
 
 		
-Services
-====================
---LoginSvc
+##Services
+####LoginSvc
 	Methods: 
 		login
 		logout
@@ -125,7 +124,7 @@ Services
 	Dependencies: $http, $localStorage
 	Comments: store the currentUser in $localStorage
 
---QuizSvc
+####QuizSvc
 	Responsible for managing the quiz.
 	Methods:
 		getQuestions
@@ -138,21 +137,20 @@ Services
 		startTimer
 		endTimer
 		resetTimer
---AnswerSvc
+####AnswerSvc
 	REsponsible for storing the user entered answers
 	Methods:
 		setChoice
 		getChoice
 		getUserAnswers
-Components
-====================
---Timer
+##Components
+####Timer
 	responsible for display the timer
 	Methods:
 		start
 		stop
 		reset
---QuestionNav
+####QuestionNav
 	responsible for displaying the graph which contains n number of buttons
 	handles click on every button
 	highlights the currentQuestion
